@@ -75,7 +75,7 @@ Amazon S3 → AWS Glue Crawler → AWS Glue Data Catalog → Amazon Athena → (
 ### ✅ Step 5: Analytical Queries Performed
 
 #### 🔸 Total Views by Category
-```sql
+sql
 SELECT
   "Category",
   SUM(TRY_CAST(REPLACE("Video views", ',', '') AS BIGINT)) AS total_views
@@ -88,7 +88,7 @@ ORDER BY total_views DESC;
 ![05-total-views](screenshots/05-total-views.png)
 
 #### 🔸 Total Likes by Category
-```sql
+sql
 SELECT
   "Category",
   SUM(TRY_CAST(REPLACE("Likes", ',', '') AS BIGINT)) AS total_likes
@@ -100,7 +100,7 @@ ORDER BY total_likes DESC;
 ![06-total-likes](screenshots/06-total-likes.png)
 
 #### 🔸 Engagement Ratio (Likes / Views)
-```sql
+sql
 SELECT
   "Category",
   ROUND(
@@ -116,7 +116,7 @@ ORDER BY engagement_ratio DESC;
 ![07-engagement-ratio](screenshots/07-engagement-ratio.png)
 
 #### 🔸 Dislikes Analysis
-```sql
+sql
 SELECT
   "Category",
   SUM(TRY_CAST(REPLACE("Dislikes", ',', '') AS BIGINT)) AS total_dislikes
@@ -128,7 +128,7 @@ ORDER BY total_dislikes DESC;
 ![08-dislikes](screenshots/08-dislikes.png)
 
 #### 🔸 Trend Analysis by Published Year
-```sql
+sql
 SELECT
   "published",
   COUNT(*) AS video_count
@@ -140,35 +140,25 @@ ORDER BY "published";
 📸 Screenshot:
 ![09-yearly-trend.](screenshots/09-yearly-trend.png)
 
-🔹 Key Insights
+##🔹 Key Insights
 
-Identified top YouTube categories by views and likes
+-Identified top YouTube categories by views and likes
+-Measured audience engagement using engagement ratio
+-Observed trends in content publishing over years
+-Successfully handled real-world dirty CSV data
 
-Measured audience engagement using engagement ratio
+## 🔹 Tools & Services Used
 
-Observed trends in content publishing over years
+-Amazon S3
+-AWS Glue
+-AWS Glue Data Catalog
+-Amazon Athena
+-Amazon QuickSight
 
-Successfully handled real-world dirty CSV data
+## 🔹 Key Learnings
 
-🔹 Tools & Services Used
-
-Amazon S3
-
-AWS Glue
-
-AWS Glue Data Catalog
-
-Amazon Athena
-
-Amazon QuickSight (optional)
-
-🔹 Key Learnings
-
-Schema-on-read analytics using AWS Glue and Athena
-
-Handling string-based numeric data in SQL
-
-Building serverless analytics pipelines on AWS
-
-Writing production-ready SQL queries
+-Schema-on-read analytics using AWS Glue and Athena
+-Handling string-based numeric data in SQL
+-Building serverless analytics pipelines on AWS
+-Writing production-ready SQL queries
 
