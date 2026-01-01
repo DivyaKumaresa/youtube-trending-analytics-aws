@@ -140,7 +140,7 @@ ORDER BY "published";
 📸 Screenshot:
 ![09-yearly-trend.](screenshots/09-yearly-trend.png)
 
-##🔹 Key Insights
+## 🔹 Key Insights
 
 - Identified top YouTube categories by views and likes
 - Measured audience engagement using engagement ratio
