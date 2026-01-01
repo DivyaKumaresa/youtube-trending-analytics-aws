@@ -142,23 +142,23 @@ ORDER BY "published";
 
 ##🔹 Key Insights
 
--Identified top YouTube categories by views and likes
--Measured audience engagement using engagement ratio
--Observed trends in content publishing over years
--Successfully handled real-world dirty CSV data
+- Identified top YouTube categories by views and likes
+- Measured audience engagement using engagement ratio
+- Observed trends in content publishing over years
+- Successfully handled real-world dirty CSV data
 
 ## 🔹 Tools & Services Used
 
--Amazon S3
--AWS Glue
--AWS Glue Data Catalog
--Amazon Athena
--Amazon QuickSight
+- Amazon S3
+- AWS Glue
+- AWS Glue Data Catalog
+- Amazon Athena
+- Amazon QuickSight
 
 ## 🔹 Key Learnings
 
--Schema-on-read analytics using AWS Glue and Athena
--Handling string-based numeric data in SQL
--Building serverless analytics pipelines on AWS
--Writing production-ready SQL queries
+- Schema-on-read analytics using AWS Glue and Athena
+- Handling string-based numeric data in SQL
+- Building serverless analytics pipelines on AWS
+- Writing production-ready SQL queries
 
